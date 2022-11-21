@@ -1,0 +1,223 @@
+@import '_material';
+@import '_mixin';
+body {
+    background-color: #FAFAFA;
+    color: #504A4A;
+    font-family: 'Pavanam', sans-serif;
+}
+
+a {
+    color: white;
+}
+
+.mdc-top-app-bar {
+    background-color: gray;
+    top: 0;
+    left: 0;
+    font-size: 15px;
+    letter-spacing: 0px;
+}
+
+footer {
+    margin-top: 6rem;
+    text-align: center;
+    bottom: 0;
+}
+
+main {
+    @include mq-medium {
+        width: 70%;
+    }
+    margin: 0 auto;
+    position: relative;
+}
+
+.container {
+    text-align: center;
+    margin-top: 6rem;
+}
+
+.message__box {
+    padding: 3rem;
+    background-color: #FAEEEF;
+    color: #504A4A;
+    margin: 0 auto;
+    margin-top: 25%;
+    &-Text {
+        text-align: center;
+        font-size: 4rem;
+        @include mq-medium {
+            width: 60%;
+        }
+        margin: 0 auto;
+        &--result {
+            background-color: white;
+            padding: 1rem;
+            border-radius: 10%;
+        }
+    }
+    &--result {
+        background-image: url('../img/date_today.png');
+        padding: 5em;
+    }
+    &-footer {
+        margin-top: 4rem;
+    }
+}
+
+.app__button {
+    border: none;
+    border-radius: 3rem;
+    background-color: #DB92AC !important;
+    color: white !important;
+    font-weight: bolder;
+    padding: 2em;
+    margin-top: 2rem;
+    &:hover {
+        border: none;
+        border-radius: 3rem;
+    }
+}
+
+.input__bubble {
+    position: relative;
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    width: 300px;
+    background: #FAEEEF;
+    border-radius: 40px;
+    padding: 24px;
+    text-align: center;
+    color: #000;
+    margin: 0 auto;
+    margin-top: 4rem;
+    &-bottom-left:before {
+        content: "";
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        border-left: 24px solid #FAEEEF;
+        border-right: 12px solid transparent;
+        border-top: 12px solid #FAEEEF;
+        border-bottom: 20px solid transparent;
+        left: 32px;
+        bottom: -24px;
+    }
+    & input {
+        border: none;
+        padding: 2rem;
+        background: #FAFAFA;
+        text-align: center;
+        &:focus,
+        &:active {
+            outline: none !important;
+            border: 2px solid grey;
+        }
+    }
+}
+
+
+/*{
+    font-size: 10rem !important;
+    &-text {
+        font-size: 1rem;
+    }
+    &--generateResults {
+        content: 'generate';
+        color: #DB92AC !important;
+        padding: 0;
+        width: 120px;
+    }
+}*/
+
+.icon__button {
+    margin-top: 5rem;
+    &-icon {
+        cursor: pointer;
+        border: none;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: #737373;
+        height: 100px;
+        width: 100px;
+        transform: rotate(-137deg);
+        &::after {
+            background-color: #737373;
+            content: "";
+            border-radius: 50%;
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            top: 0px;
+            left: 40px;
+        }
+        &::before {
+            background-color: #737373;
+            content: "";
+            border-radius: 50%;
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            left: 0px;
+            top: 40px;
+        }
+    }
+    //mobile left 30
+    &-text {
+        cursor: pointer;
+        position: absolute;
+        margin-top: -4.5rem;
+        text-align: center;
+        @include mq-medium {
+            left: 45%;
+            width: 100px;
+        }
+        left: 36%;
+        font-size: 1.4rem;
+        color: white;
+    }
+}
+
+.mdc-fab--pinkColor {
+    background-color: #DB92AC !important;
+    position: absolute;
+    left: 0;
+    top: 0.4rem;
+}
+
+.mdc-fab__icon--fallingHearts {
+    color: #DB92AC !important;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    font-size: 1.3em;
+    font-family: 'Redressed', cursive;
+    &:hover {
+        background-color: darkgrey;
+        ;
+        color: white;
+        padding: 1rem;
+    }
+}
+
+.error__message {
+    display: none;
+    background-color: #d27da4;
+    color: white;
+    padding: 1rem;
+    font-size: 1.2em;
+    flex-direction: row;
+    &-icon {
+        font-size: 2rem !important;
+        margin-right: 0.7rem;
+    }
+    &-text {
+        margin-top: 0.3rem;
+    }
+}
